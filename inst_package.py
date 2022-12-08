@@ -1,13 +1,12 @@
 import subprocess
 
-
-def inst_package(p_name):
+def inst(p_name):
     """
     Install package(s) inside a python script.
     Supported formats:
-    inst_package("numpy")
-    inst_package("numpy, requests, pandas")
-    inst_package(["numpy", "requests", "pandas"])
+    inst("numpy")
+    inst("numpy, requests, pandas")
+    inst(["numpy", "requests", "pandas"])
     """
 
     try:
@@ -15,7 +14,7 @@ def inst_package(p_name):
             print(f'\033[35mInstalling {p_name}...')
             if "," in p_name:
                 p_name = p_name.split(",")
-                inst_package(p_name)
+                inst(p_name)
                 return
             p = p_name.replace(" ", "")
             print(f'Checking status of {p} using pip...\033[0m')
@@ -27,8 +26,7 @@ def inst_package(p_name):
 
         if isinstance(p_name, list):  # if p_name is a list, install all packages in the list
             for p in p_name:
-                inst_package(p)
+                inst(p)
 
     except Exception as e:
         print(f'\033[31mAn error {e} occurred while installing {p_name}.\033[0m')
-

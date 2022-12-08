@@ -1,4 +1,5 @@
-Install package(s) inside a python script. 
+# inst_package
+### Install package(s) inside a python script. 
 
 Supported formats: 
 

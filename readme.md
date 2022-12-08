@@ -5,12 +5,18 @@
 Supported formats: 
 
 ```python
-inst_package("numpy") 
-inst_package("numpy, requests, pandas") 
-inst_package(["numpy", "requests", "pandas"])
+inst("numpy") 
+inst("numpy, requests, pandas") 
+inst(["numpy", "requests", "pandas"])
 ```
 
-inst_package install one or more Python packages using the `pip` command. The function accepts a single parameter called p_name, which can be either a string or a list of strings containing the name(s) of the package(s) to be installed.
+inst_package install one or more Python packages sequentially using the `pip` command. The function accepts a single parameter called p_name, which can be either a string or a list of strings containing the name(s) of the package(s) to be installed.
+
+```python
+import inst_package
+inst_package.inst("numpy")
+inst_package.inst(["numpy", "requests", "pandas"])
+```
 
 The `inst_package()` function first checks the type of the p_name parameter using the isinstance() function. If p_name is a string, the function checks if the string contains a comma character. If it does, the string is split into a list of strings using the split() method, and then the function is called recursively with the list of strings as the argument.
 

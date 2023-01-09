@@ -4,6 +4,8 @@
 [![Python](https://img.shields.io/badge/python-3)](https://www.python.org/downloads/)
 [![Pip](https://img.shields.io/badge/pip-3)](https://pypi.org/project/pip/)
 
+<img width="908" alt="image" src="https://user-images.githubusercontent.com/101531662/211398288-f9a987a2-effd-49ae-92af-d64e4de23d9d.png">
+
 You must [have pip installed](https://pip.pypa.io/en/stable/installation/) to use this module. 
 
 instPackage install one or more Python packages sequentially using the `pip` command. The function accepts a single parameter called p_name, which can be either a string or a list of strings containing the name(s) of the package(s) to be installed.

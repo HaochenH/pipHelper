@@ -30,7 +30,7 @@ def inst(package):
     except Exception as e:
         print(f'\033[31mAn error {e} occurred while installing {package}.\033[0m')
 
-def inst_version(package, version):
+def instVer(package, version):
     """
     Install a specific version of a package(s)
     Accept: ["numpy", "requests", "pandas"], ["1.19.2", "2.28.1", "1.2.3"]
@@ -42,7 +42,7 @@ def inst_version(package, version):
             if "," in package:
                 package = package.split(",")
                 version = version.split(",")
-                inst_version(package, version)
+                instVer(package, version)
                 return
             p = package.replace(" ", "")
             print(f'\033[35mInstalling {p} version {version}...')
@@ -55,7 +55,7 @@ def inst_version(package, version):
 
         if isinstance(package, list):
             for p, v in zip(package, version):
-                inst_version(p, v)
+                instVer(p, v)
         
     except Exception as e:
         print(f'\033[31mAn error {e} occurred while installing {package}.\033[0m')

@@ -1,11 +1,7 @@
 import pipHelper
-# install a single package
-pipHelper.inst("numpy")
 # install multiple packages
-pipHelper.inst("numpy, requests, pandas")
-# or
-pipHelper.inst(["numpy", "requests", "pandas"])
+pipHelper.inst("numpy, requests")
 # install a specific version of a package
-pipHelper.instVer("numpy", "1.19.2")
-pipHelper.instVer(["numpy", "requests", "pandas"], ["1.19.2", "2.28.1", "1.2.3"])
-pipHelper.instVer("numpy, requests, pandas", "1.19.2, 2.28.1, 1.2.3")
+pipHelper.instVer("numpy, requests", "1.19.2, 2.28.1")
+pipHelper.uninst("numpy, requests")
+# pipHelper.uninstAll()

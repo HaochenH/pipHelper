@@ -17,7 +17,6 @@ def inst(package):
                 inst(package)
                 return
             p = package.replace(" ", "")
-            print()
             print(f'Checking status of {p} using pip...\033[0m')
             output = subprocess.run("pip3 show " + p, shell=True)
             if output.returncode != 0:
@@ -95,19 +94,12 @@ def uninst(package):
 
 
 def uninstAll():
-    # confirm
     print("\033[35mFetching all packages installed using pip...\033[0m")
     subprocess.run("pip3 freeze > all_packages.txt", shell=True)
     with open("all_packages.txt", "r") as f:
         packages = f.read().splitlines()
-        packages = [p.split("==")[0] for p in packages]
+        # packages = [p.split("==")[0] for p in packages]
         print(packages)
-        print(
-            "\033[31mThis will uninstall all packages installed using pip.\033[0m")
-        confirm = input("Are you sure you want to continue? (y/n): ")
-        if confirm == "y":
-            for p in packages:
-                uninst(p)
-            print("\033[35mAll packages uninstalled.\033[0m")
-        else:
-            print("Cancelled.")
+        for p in packages:
+            uninst(p)
+        print("\033[35mAll packages uninstalled.\033[0m")

@@ -1,5 +1,5 @@
 # pipHelper
-### Install package(s) inside a python script
+### Install or remove package(s) inside a python script
 [![License](https://img.shields.io/badge/license-GPL-3)](https://www.gnu.org/licenses/gpl-3.0.html) 
 [![Python](https://img.shields.io/badge/python-3)](https://www.python.org/downloads/)
 [![Pip](https://img.shields.io/badge/pip-3)](https://pypi.org/project/pip/)

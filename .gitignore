@@ -153,3 +153,4 @@ cython_debug/
 
 all_packages.txt
 example_use.py
+.DS_Store

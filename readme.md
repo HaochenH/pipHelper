@@ -1,8 +1,13 @@
 # pipHelper
 ### Install or remove package(s) inside a python script
+
 [![License](https://img.shields.io/badge/license-GPL-3)](https://www.gnu.org/licenses/gpl-3.0.html) 
 [![Python](https://img.shields.io/badge/python-3)](https://www.python.org/downloads/)
 [![Pip](https://img.shields.io/badge/pip-3)](https://pypi.org/project/pip/)
+
+[Github Repo](https://github.com/HaochenH/pipHelper) 
+
+[Web Documentation](https://haochenh.github.io/pipHelper)
 
 You must have [pip](https://pip.pypa.io/en/stable/installation/) installed to use this module. 
 
